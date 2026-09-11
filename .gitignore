@@ -1,0 +1,17 @@
+# Ambiente virtuale
+venv/
+env/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Cache pytest
+.pytest_cache/
+
+# File di sistema / editor
+.DS_Store
+.ipynb_checkpoints/
+
+# File specifici del progetto generati automaticamente
+*.html
