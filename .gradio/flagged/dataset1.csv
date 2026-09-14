@@ -1,0 +1,2 @@
+Text To Analyze,Sentiment,timestamp
+I love the new perfume,"{""label"": ""positive"", ""confidences"": [{""label"": ""positive"", ""confidence"": 0.9819999933242798}, {""label"": ""neutral"", ""confidence"": 0.013199999928474426}, {""label"": ""negative"", ""confidence"": 0.004800000227987766}]}",2026-09-14 09:09:44.051321
