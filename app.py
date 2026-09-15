@@ -1,7 +1,7 @@
 import gradio as gr
 from inference import predict_sentiment
 
-
+@spaces.GPU
 def classify_sentiment(text):
     result = predict_sentiment(text)
     return {
@@ -10,7 +10,7 @@ def classify_sentiment(text):
         "positive": result["positive"],
     }
 
-@spaces.GPU
+
 demo = gr.Interface(
     fn=classify_sentiment,
     inputs=gr.Textbox(label="Text To Analyze", placeholder="Write here your sentence..."),
