@@ -10,7 +10,7 @@ def classify_sentiment(text):
         "positive": result["positive"],
     }
 
-
+@spaces.GPU
 demo = gr.Interface(
     fn=classify_sentiment,
     inputs=gr.Textbox(label="Text To Analyze", placeholder="Write here your sentence..."),
