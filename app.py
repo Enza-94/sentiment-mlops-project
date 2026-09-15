@@ -1,4 +1,5 @@
 import gradio as gr
+import spaces
 from inference import predict_sentiment
 
 @spaces.GPU
