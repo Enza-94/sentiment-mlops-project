@@ -2,3 +2,7 @@
 
 
 # GRADIO
+
+
+
+# deploy_su_hf : https://huggingface.co/docs/huggingface_hub/guides/upload
