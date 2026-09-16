@@ -6,3 +6,9 @@
 
 
 # deploy_su_hf : https://huggingface.co/docs/huggingface_hub/guides/upload
+
+
+# uso del dataset : https://legacy-docs.giskard.ai/en/stable/reference/notebooks/twitter_sentiment_analysis_roberta.html; https://huggingface.co/datasets/cardiffnlp/tweet_eval
+
+
+# drif delle performance del modello : https://docs.evidentlyai.com/metrics/preset_data_drift
