@@ -3,12 +3,18 @@ services:
     build: .
     ports:
       - "8000:8000"
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
 
   drift-monitor:
     build: .
     command: python drift_monitor.py
     volumes:
       - ./reports:/app/reports
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
 
   prometheus:
     image: prom/prometheus
@@ -25,3 +31,6 @@ services:
       - "3000:3000"
     depends_on:
       - prometheus
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
