@@ -2,9 +2,11 @@ fastapi
 uvicorn
 pydantic==2.12.5
 transformers
+--extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.13.0
 scipy
 gradio
 huggingface_hub
 pytest
 flake8
+evidently

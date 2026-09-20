@@ -15,12 +15,16 @@ def build_drift_report(reference_df, current_df, output_path: str = "drift_repor
     return evaluation
 
 if __name__ == "__main__":
+
+    import os
+    os.makedirs("reports", exist_ok=True)
+
     reference = pd.DataFrame({
         "sentiment_label": ["positive"] * 60 + ["neutral"] * 30 + ["negative"] * 10
     })
     current = pd.DataFrame({
         "sentiment_label": ["positive"] * 40 + ["neutral"] * 30 + ["negative"] * 30
     })
-
-    build_drift_report(reference, current)
+    evaluation = build_drift_report(reference, current, output_path="reports/drift_report.html")
+    print("Report generato: reports/drift_report.html")
     print("Report generato: drift_report.html")
