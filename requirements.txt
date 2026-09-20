@@ -10,3 +10,4 @@ huggingface_hub
 pytest
 flake8
 evidently
+prometheus-fastapi-instrumentator
