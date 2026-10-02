@@ -3,6 +3,8 @@ services:
     build: .
     ports:
       - "8000:8000"
+    volumes:
+      - ./reports:/app/reports
   
 
   drift-monitor:
@@ -10,7 +12,7 @@ services:
     command: python drift_monitor.py
     volumes:
       - ./reports:/app/reports
-  
+ 
 
   prometheus:
     image: prom/prometheus

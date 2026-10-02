@@ -22,9 +22,31 @@ if __name__ == "__main__":
     reference = pd.DataFrame({
         "sentiment_label": ["positive"] * 60 + ["neutral"] * 30 + ["negative"] * 10
     })
-    current = pd.DataFrame({
-        "sentiment_label": ["positive"] * 40 + ["neutral"] * 30 + ["negative"] * 30
-    })
-    evaluation = build_drift_report(reference, current, output_path="reports/drift_report.html")
+     # Leggiamo le predizioni reali generate dall'API
+    predictions_file = "reports/predictions.csv"
+
+    current = pd.read_csv(predictions_file)
+
+    current = current[["sentiment_label"]]
+
+
+    negative_ratio = (
+    (current["sentiment_label"] == "negative").sum()
+    / len(current))
+
+    print(f"Negative sentiment: {negative_ratio:.1%}")
+
+    if negative_ratio > 0.30:
+        print("REPUTATION ALERT: ON")
+    else:
+        print("REPUTATION ALERT: OFF")
+
+    # Generiamo il report
+    evaluation = build_drift_report(
+        reference,
+        current,
+        output_path="reports/drift_report.html"
+    )
+
     print("Report generato: reports/drift_report.html")
-    print("Report generato: drift_report.html")
+   
