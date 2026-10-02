@@ -4,4 +4,4 @@ global:
 scrape_configs:
   - job_name: "sentiment-api"
     static_configs:
-      - targets: ["api:8000"]
+      - targets: ["172.18.0.3:8000"]
