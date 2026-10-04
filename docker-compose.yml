@@ -10,6 +10,8 @@ services:
   drift-monitor:
     build: .
     command: python drift_monitor.py
+    ports:
+      - "8001:8001"
     volumes:
       - ./reports:/app/reports
  
@@ -32,5 +34,21 @@ services:
     depends_on:
       - prometheus
     extra_hosts:
-    - "host.docker.internal:host-gateway"
-    
+      - "host.docker.internal:host-gateway"
+  
+  airflow:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    ports:
+      - "8080:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./evaluate_model.py:/opt/airflow/evaluate_model.py
+      - ./minimal_retraining.py:/opt/airflow/minimal_retraining.py
+      - ./data:/opt/airflow/data
+      - ./inference.py:/opt/airflow/inference.py
+      - ./model:/opt/airflow/model
+    command: standalone

@@ -4,7 +4,8 @@ import torch
 import numpy as np
 from scipy.special import softmax
 
-MODEL_NAME = "cardiffnlp/twitter-roberta-base-sentiment-latest"
+# MODEL_NAME = "cardiffnlp/twitter-roberta-base-sentiment-latest"
+MODEL_NAME = "/opt/airflow/model"
 
 # modificato da: https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest
 

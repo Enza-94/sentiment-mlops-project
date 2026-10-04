@@ -1,11 +1,11 @@
-from datasets import load_dataset
+from datasets import load_from_disk
 from inference import predict_sentiment
 
 LABEL_MAP = {"negative": 0, "neutral": 1, "positive": 2} # il modello ha come output 1,2,3; a noi restituisce negative, neutral, positive; perciò bisogna fare un mapping
 
 
 def evaluate(n_samples = 500):
-    dataset = load_dataset("cardiffnlp/tweet_eval", "sentiment")
+    dataset = load_from_disk("data/tweet_eval")
     test_set = dataset["test"].select(range(n_samples))
 
     correct = 0
