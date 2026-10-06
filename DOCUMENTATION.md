@@ -6,13 +6,21 @@ WORKFLOW
 The main workflow is:
 
 Text input
+    
     ↓
+
 FastAPI
+    
     ↓
+
 Sentiment prediction
+   
     ↓
+
 Prometheus metrics
+    
     ↓
+
 Grafana dashboard
 
 FastAPI
