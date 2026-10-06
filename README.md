@@ -20,18 +20,17 @@ The model classifies text into three sentiment categories:
 
 **HOW TO RUN:**
 
-Clone the repository:
+*Clone the repository:*
 
 git clone https://github.com/Enza-94/sentiment-mlops-project.git
 
 cd sentiment-mlops-project
 
-Start the services with Docker Compose:
+*Start the services with Docker Compose:*
 
 docker compose up
 
 The main services can then be accessed through their configured local ports.
-
 
 For a short description of the architecture, workflow, monitoring, and results, see:
 
