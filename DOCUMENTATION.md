@@ -69,9 +69,9 @@ This makes the workflow easier to monitor and reproduce.
 
 During the execution of the Airflow pipeline, two issues were encountered:
 
-    DNS/network issue: Airflow was unable to reliably access the external Hugging Face resources due to DNS resolution problems. This prevented the model from being downloaded or accessed consistently from the            external repository.
+*DNS/network issue: Airflow was unable to reliably access the external Hugging Face resources due to DNS resolution problems. This prevented the model from being downloaded or accessed consistently from the            external repository.
     
-    Memory limitation: A retraining task failed because the available memory was not sufficient to complete the process.
+*Memory limitation: A retraining task failed because the available memory was not sufficient to complete the process.
 
 ![alt text](immagine-5.png)
 
