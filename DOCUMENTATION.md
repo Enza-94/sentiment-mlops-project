@@ -1,4 +1,4 @@
-We used cardiffnlp/twitter-roberta-base-sentiment-latest, a RoBERTa-based model fine-tuned for sentiment analysis.
+We used cardiffnlp/twitter-roberta-base-sentiment-latest, a RoBERTa-based model fine-tuned for sentiment analysis. We tested its basic accuracy, which is aroung 75%.
 
 
 **WORKFLOW:** 
