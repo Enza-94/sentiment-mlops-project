@@ -1,4 +1,4 @@
-Sentiment Analysis MLOps Project
+**Sentiment Analysis MLOps Project**
 
 This project implements a simple MLOps pipeline for sentiment analysis, integrating model serving, monitoring, visualization, and workflow orchestration.
 
