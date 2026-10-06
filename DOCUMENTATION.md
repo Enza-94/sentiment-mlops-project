@@ -48,11 +48,11 @@ The API returns the predicted sentiment.
     ![alt text](immagine-2.png)
 
 
-    First dashboard: sentiment distribution
+    *First dashboard:* sentiment distribution
   
     ![alt text](immagine-3.png)
 
-    Second dashboard: Alert status through the definition of an alert rule on grafana according to the rule we have defined before.
+    *Second dashboard:* Alert status through the definition of an alert rule on grafana according to the rule we have defined before.
 
     The alert is designed to identify an undesirable change in the sentiment distribution; an alert rule is set on Grafana.
     This demonstrates how monitoring can be extended from simple visualization to automatic alerting.
@@ -77,7 +77,6 @@ During the execution of the Airflow pipeline, two issues were encountered:
 
 
 ![alt text](immagine-6.png)
-
 
 
 **Deployment**
